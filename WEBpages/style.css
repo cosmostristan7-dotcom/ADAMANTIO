@@ -1,0 +1,190 @@
+/* ==========================================================================
+   1. VARIABLES & THEME SETUP
+   ========================================================================== */
+:root {
+    --bg-main: #0d1117;       /* Deep obsidian midnight background */
+    --bg-card: #161b22;       /* Slightly lighter dark for sections/cards */
+    --text-main: #c9d1d9;     /* Soft white/light gray for readable body text */
+    --text-muted: #8b949e;    /* Dimmed gray for captions, dates, and footnotes */
+    --accent-green: #004d26;  /* Rich, deep forest green */
+    --accent-glow: #1f874c;   /* Vibrant green for hover states and links */
+    --border-color: #21262d;  /* Subtle divider lines */
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ==========================================================================
+   2. GLOBAL RESETS & BASE STYLES
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container to keep content centered and readable */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4 {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--accent-green);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Subtle left border decoration for section headers */
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.2rem;
+    background-color: var(--accent-glow);
+    margin-right: 0.75rem;
+    border-radius: 2px;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+/* ==========================================================================
+   4. NAVIGATION BAR (If you add one later)
+   ========================================================================== */
+nav {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent-glow);
+}
+
+/* ==========================================================================
+   5. LINKS & INTERACTIVE ELEMENTS
+   ========================================================================== */
+a {
+    color: var(--accent-glow);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed transparent;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    border-bottom-color: var(--accent-glow);
+}
+
+/* ==========================================================================
+   6. CONTENT BLOCKS (Cards, Markdown Render Layouts)
+   ========================================================================== */
+/* Perfect for wrapping individual research entries or video sections */
+.content-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for video containers (YouTube embeds/local videos) */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #000;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+.video-wrapper iframe, 
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Blockquotes for historical excerpts or heavy research notes */
+blockquote {
+    background-color: rgba(0, 77, 38, 0.15); /* Light transparency of our dark green */
+    border-left: 4px solid var(--accent-green);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #e6edf3;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Metadata styling (dates, category tags) */
+.meta {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   7. UTILITIES & FOOTER
+   ========================================================================== */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
