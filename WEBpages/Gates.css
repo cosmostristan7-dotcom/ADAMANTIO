@@ -1,0 +1,123 @@
+/* ==========================================================================
+   GATES.CSS - Retro Terminal & Mystery Hub Archive
+   ========================================================================== */
+
+/* --- 1. Global Setup & Design Variables --- */
+:root {
+    --bg-color: #08090c;        /* Deep, dark void background */
+    --panel-color: #111317;     /* Dark inner console container */
+    --terminal-amber: #ffb000;  /* Vintage 1980s amber CRT monitor glow */
+    --text-silver: #a0a5b0;     /* Muted silver-grey for comfortable reading */
+    --border-metal: #2e323d;    /* Subdued structural frame color */
+    
+    /* Typography */
+    --font-terminal: 'Courier New', Courier, monospace;
+    --font-reading: 'Georgia', serif;
+}
+
+/* --- 2. Base Body & Vintage Screen Scanlines --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-silver);
+    font-family: var(--font-reading);
+    line-height: 1.7;
+    padding: 3rem 1rem;
+    margin: 0;
+    
+    /* Creates subtle horizontal micro-grid lines mimicking a vintage monitor */
+    background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+}
+
+/* --- 3. Terminal Container (Dossier Frame) --- */
+.terminal-container {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-metal);
+    padding: 3rem;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+}
+
+/* --- 4. System Status & Header Elements --- */
+.security-tag {
+    font-family: var(--font-terminal);
+    color: var(--terminal-amber);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.75;
+}
+
+h1 {
+    font-family: var(--font-terminal);
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 2px dashed var(--border-metal);
+    padding-bottom: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- 5. Intercept Log (Your Dedication Block) --- */
+.dedication-block {
+    background: rgba(255, 176, 0, 0.02);
+    border-left: 3px solid var(--terminal-amber);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.dedication-block p em {
+    color: #cbd5e1;
+    font-style: italic;
+}
+
+.instruction-text {
+    font-family: var(--font-terminal);
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+/* --- 6. Interactive Portal Menu (Gateway Links) --- */
+.gate-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.gate-link {
+    display: block;
+    font-family: var(--font-terminal);
+    color: var(--text-silver);
+    text-decoration: none;
+    padding: 1.2rem;
+    border: 1px solid var(--border-metal);
+    background: rgba(255, 255, 255, 0.01);
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gate-status {
+    color: #4b5263; /* Subdued metal gray when sitting idle */
+    margin-right: 12px;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* --- 7. Hover & Interaction Mechanics --- */
+.gate-link:hover {
+    color: var(--terminal-amber);
+    border-color: var(--terminal-amber);
+    background: rgba(255, 176, 0, 0.04);
+    transform: translateX(6px); /* Clean micro-shift animation */
+    box-shadow: 0 0 15px rgba(255, 176, 0, 0.1);
+}
+
+.gate-link:hover .gate-status {
+    color: var(--terminal-amber);
+    text-shadow: 0 0 5px var(--terminal-amber); /* Status text lights up */
+}
