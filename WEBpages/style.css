@@ -21,8 +21,13 @@
     padding: 0;
 }
 
+/* Smooth scrolling for nav links */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: var(--bg-main);
+    background: linear-gradient(180deg, #0d1117 0%, #0b0f14 100%);
     color: var(--text-main);
     font-family: var(--font-sans);
     line-height: 1.6;
@@ -78,7 +83,7 @@ p {
 }
 
 /* ==========================================================================
-   4. NAVIGATION BAR (If you add one later)
+   4. NAVIGATION BAR
    ========================================================================== */
 nav {
     background-color: var(--bg-card);
@@ -96,6 +101,10 @@ nav .nav-container {
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
+}
+
+nav .nav-links a {
+    margin-left: 1.25rem; /* Improved spacing */
 }
 
 nav a {
@@ -116,19 +125,33 @@ a {
     color: var(--accent-glow);
     text-decoration: none;
     font-weight: 500;
-    border-bottom: 1px dashed transparent;
+    position: relative;
     transition: all 0.2s ease;
+}
+
+/* Animated underline */
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 1px;
+    background: var(--accent-glow);
+    transition: width 0.25s ease;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 a:hover {
     color: #ffffff;
-    border-bottom-color: var(--accent-glow);
 }
 
 /* ==========================================================================
    6. CONTENT BLOCKS (Cards, Markdown Render Layouts)
    ========================================================================== */
-/* Perfect for wrapping individual research entries or video sections */
 .content-section {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -136,12 +159,19 @@ a:hover {
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: 0.25s ease; /* Needed for hover animation */
 }
 
-/* Styling for video containers (YouTube embeds/local videos) */
+/* Card hover glow */
+.content-section:hover {
+    border-color: var(--accent-glow);
+    box-shadow: 0 0 12px rgba(31, 135, 76, 0.25);
+}
+
+/* Video container */
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 6px;
@@ -159,9 +189,9 @@ a:hover {
     height: 100%;
 }
 
-/* Blockquotes for historical excerpts or heavy research notes */
+/* Blockquotes */
 blockquote {
-    background-color: rgba(0, 77, 38, 0.15); /* Light transparency of our dark green */
+    background-color: rgba(0, 77, 38, 0.15);
     border-left: 4px solid var(--accent-green);
     padding: 1rem 1.5rem;
     margin: 1.5rem 0;
@@ -170,7 +200,7 @@ blockquote {
     border-radius: 0 4px 4px 0;
 }
 
-/* Metadata styling (dates, category tags) */
+/* Metadata styling */
 .meta {
     font-size: 0.875rem;
     color: var(--text-muted);
