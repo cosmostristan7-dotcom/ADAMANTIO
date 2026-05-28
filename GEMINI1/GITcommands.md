@@ -70,7 +70,7 @@ To undo a commit that is already up on the remote reposiorty.
 * `git stash apply`, 
   applies the stash back to my code BUT KEEPS a copy on the shelf (great for applying to multiple branches).
 
-* `git stash dropp`, 
+* `git stash drop`, 
   throws away a specific stash without applyimg it. 
 
 * `git stash clear`, 
@@ -98,7 +98,7 @@ ignores new files which I haven't untracked yet. (Files I haven't run // git add
 ## TO DELETE A BRANCH IN GIT there are 2 ways:
 
 * `git branch -d <branch-name>`, 
-  deletes merged branch into the main branch. In any case I haven't merged my brach, git will stop me adna ask me if I want to do it.
+  deletes merged branch into the main branch. In any case I haven't merged my brach, git will stop me and ask me if I want to do it.
 
 * `git branch -D <branch-name>`,
   force deletes or discards everything on the branch.
@@ -129,7 +129,7 @@ zsh... (1. git checkou feature) // (2. git rebase main), enter.
 
 * `git branch`, lists all the repository branches.
 
-* `git confi --global alias.name "command"`, 
+* `git config --global alias.name "command"`, 
   can configuratean alias in git to shorter commands.
 
 * `git fetch upstream`, 
@@ -138,7 +138,7 @@ zsh... (1. git checkou feature) // (2. git rebase main), enter.
 * `git reset --hard commitID`, 
   I can get to the previous commit while the newest commits are removed. 
 
-* `git rest --soft HEAD`,
+* `git reset --soft HEAD`,
   undone the last commit without lossing any changes made.
 
 ### TO BE CONTINED!
