@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+      <meta charset="UTF-8">
+            <title>To SAVE changes made onto GIT&colon;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <p><strong>''' GIT COMMANDS '''</strong></p>
+            
+            <!-- Section: Git Status Options -->
+            <ul>
+                <li><code>git status -s</code> (or <code>--short</code>): It shows the output in a better, short format.</li>
+                <li><code>git status -b</code> (or <code>--branch</code>): It shows the current branch plus its status.</li>
+                <li><code>git status --show-stash</code>: It shows if something has been saved in the stash.</li>
+                <li><code>git status --ignored</code>: It also shows the ignored files.</li>
+            </ul>
+
+            <!-- Section: Git Add Options -->
+            <ul>
+                <li><code>git add &lt;filename&gt;</code>: To add specific files to my git repository.</li>
+                <li><code>git add .</code>: That dot (.) means "here". Everything inside the current folder.</li>
+                <li><code>git add -A</code> (or <code>git add --all</code>): Adds absolutely everything.</li>
+                <li><code>git add *.txt</code>: It will add all the files ending with the .txt extension.</li>
+            </ul>
+
+            <!-- Section: Workflow to Save Changes -->
+            <h1 id="to-save-changes-made-onto-git">To SAVE changes made onto GIT:</h1>
+            <ol>
+                <li>In your terminal type: <code>git add .</code> and press Enter.</li>
+                <li>Type <code>git status</code> and press Enter to review.</li>
+                <li>Type <code>git commit -m "label your text"</code> and press Enter.</li>
+            </ol>
+
+            <!-- Status Explanations using custom Markdown Alerts -->
+            <div class="markdown-alert markdown-alert-warning">
+                <p class="markdown-alert-title">Red Text</p>
+                <p>If things are RED, it means you have saved the changes on your computer, but you haven't packed them into the box yet (<code>git commit</code>).</p>
+            </div>
+
+            <div class="markdown-alert markdown-alert-tip">
+                <p class="markdown-alert-title">Green Text</p>
+                <p>If things are GREEN, they are packed into the box to be locked in (<code>git commit</code>).</p>
+            </div>
+
+            <div class="markdown-alert markdown-alert-note">
+                <p class="markdown-alert-title">Clean Tree</p>
+                <p>If it says: <em>"nothing to commit, working tree clean"</em>: Everything is perfectly snapshotted and up to date.</p>
+            </div><h2 id="to-update-your-local-savings-into-github">TO UPDATE YOUR LOCAL SAVINGS INTO GITHUB:</h2>
+
+            <!-- Section: Git Push & Logs -->
+            <h2>TO UPDATE YOUR LOCAL SAVINGS INTO GITHUB:</h2>
+            <ul>
+                <li><code>git push</code>: After typing git status, git add, and git commit, you finally type this in order to update the file on GitHub.</li>
+            </ul>
+
+            <h2>TO SEE your savings history:</h2>
+            <ul>
+                <li><code>git log</code>, press Enter.</li>
+            </ul>
+
+            <h2>TO SEE the same but in a cleaner and shorter view:</h2>
+            <ul>
+                <li><code>git log --oneline</code></li>
+            </ul>
+
+            <h2>TO SEE your timelines (branches):</h2>
+            <ul>
+                <li><code>git branch</code></li>
+            </ul>
+
+            <h1>WHAT TO DO WITH RED TEXT:</h1>
+            <ul>
+                <li><code>git commit -am "added whatever files I created"</code>, press Enter.</li>
+            </ul>
+
+            <h1><code>git log --oneline</code>: it displays your history savings.</h1>
+
+            <!-- Section: WINDOWS and macOS Case Sensitivity -->
+            <h2>Because Windows and macOS are case-insensitive, Git on your computer might look right past your change and say:</h2>
+
+            <p><code>nothing to commit, working tree clean.</code></p>
+
+
+            <p>If that happens, it means Git didn't even notice you capitalized the S - (or whatever file name). If you push right now, GitHub won't update, and your website might break when you deploy it.</p>
+
+
+            <p>If <code>git status</code> ignores your hard work, don't panic! Just run this one command in your terminal first to force Git to see it:</p>
+
+
+            <ul>
+
+              <li>
+
+                <code>git config core.ignorecase false</code><br>
+
+                This will make a reset in GitCore, and when I type <code>git status</code>, it will see the actual change made (as unsaved).
+
+              </li>
+
+            </ul>
+
+
+            <hr>
+
+
+            <h2>IF THE WEBPAGE SHOWS YOU AN ERROR 404 (PAGE NOT FOUND),</h2>
+
+            <p>follow these steps to find exactly where this exact broken path is:</p>
+
+
+            <ol type="A">
+
+              <li>Right-click anywhere on your broken webpage.</li>
+
+              <li>Click on <strong>Inspect</strong> (or Inspect Element) at the very bottom of the menu. A window full of code will pop up on the side or bottom of your screen.</li>
+
+              <li>Look at the top menu of that new window and click on the <strong>Console</strong> tab. (WHAT TO LOOK FOR?)</li>
+
+            </ol>
+
+
+            <h3>Inside that Console, you will see bright red error messages.</h3>
+
+            <p>It will be something like this:</p>
+
+            <p><code>GET https://yourwebsite.com/Stlye.css net::ERR_ABORTED 404 (Not Found)</code></p>
+
+
+            <hr>
+
+
+            <h3>TO FORCE MV (move or rename) a file through Git:</h3>
+
+
+            <ul>
+
+              <li>
+
+                <code>git mv -f "file.name" "File.name"</code>, press Enter<br>
+
+                Since VSCode and GIT are case-insensitive whenever you try to rename a file.name the petition won't be done, unless you force it by using this command.
+
+              </li>
+
+            </ul>
+
+
+            <p>Internet eyes are case-sensitive, therefore if by any chance it finds a lowercase file name, it will show you a 404 error. That's why your path Name.files must be case-sensitive.</p>
+            
+            
+
+          </body>
+
+          </html>

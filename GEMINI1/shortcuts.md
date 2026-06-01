@@ -25,4 +25,7 @@ Here, open finder, and drag the file or folder you want to move,
 Press SPACE, then type a . dot, then enter.  
 This dot . means here, the file or folder will move to where you are in your terminal.
 
-##
+## Pro-Tip for VS Code:
+Instead of scrolling and hunting line-by-line, press Ctrl + F (Windows) or Cmd + F (Mac) inside VS Code and type in <li>\`` or `. This will highlight every single spot where those rogue backticks are hiding so you can delete them or swap them out for ` tags instantly! 
+
+...
