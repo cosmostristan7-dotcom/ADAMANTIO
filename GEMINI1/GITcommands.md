@@ -141,4 +141,33 @@ zsh... (1. git checkou feature) // (2. git rebase main), enter.
 * `git reset --soft HEAD`,
   undone the last commit without lossing any changes made.
 
-### TO BE CONTINED!
+## Because Windows and macOS are case-insensitive, Git on your computer might look right past your change and say:
+nothing to commit, working tree clean.
+If that happens, it means Git didn't even notice you capitalized the S - (or whatever file name). If you push right now, GitHub won't update, and your website might break when you deploy it.
+If git status ignores your hard work, don't panic! Just run this one command in your terminal first to force Git to see it:
+
+* `git config core.ignorecase false`, 
+  This will make a reset in GitCore, and when I type git status, it will see the actual change made (as unsaved).
+
+## IF THE WEBPAGE SHOWS YOU AN ERROR 404 (PAGE NO FOUND), 
+follow these steps to find exactly where this exact broken path is:
+
+`A.` Right-click anywhere on your broken webpage.
+`B.` Click on Inspect (or Inspect Element) at the very bottom of the menu. A window full of code will pop up on the side or bottom of your screen.
+`C.` Look at the top menu of that new window and click on the Console tab. (WHAT TO LOOK FOR?)
+
+# Inside that Console, you will see bright red error messages.
+# It will be someting like this:
+
+`GET https://yourwebsite.com/Stlye.css net::ERR_ABORTED 404 (Not Found)`
+
+# TO FORCE MV (move or rename) a file through Git:
+
+* `git mv -f "file.name" "File.name"`, press Enter
+Since VSCode and GIT are case-unsensitive whenever you try to rename a file.name the petition won't be done, unless you force it ny using this command. 
+
+Internet eyes are case-sensitive, therefore if by any chance it finds a lovercase file name, it will show you a 404 error. That's why your path Name.files must be case-sensitive. 
+
+## to be continued...
+
+

@@ -23,3 +23,5 @@ Instead of rows and columns, NoSQL relies on **flexible data models**.
 
 * **Key concept:** Data can be stored as documents (which look a lot like Python dictionaries/JSON), key-value pairs, or graphs. It is ideal for unstructured data or when your data structure changes frequently. 
 
+## MYSQL syntax: 
+Think of a SQL database like an Excel spreadsheet. `It holds tables with rows and columns.` To talk to the database, we use simple English-like commands to Create, Insert, and Select data.

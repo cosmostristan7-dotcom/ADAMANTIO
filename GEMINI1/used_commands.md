@@ -21,7 +21,7 @@
 
 * `ls = [path/folder_name, ls]`, "It lists items within folders".
 
-- `ls -l = [type command]`, "It lists items and code description oec".
+- `ls -l = [type command]`, "It lists items and code description".
 
 * `cd = [cd, folder_name or file_name]`, "navegates around".
 * `mv = [mv, folder_name new_name]`, "renames a file".

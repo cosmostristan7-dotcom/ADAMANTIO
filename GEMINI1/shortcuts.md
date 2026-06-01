@@ -22,7 +22,7 @@ When moving files or folders using your VS Code, let's say you are inside the fo
 
 Here, open finder, and drag the file or folder you want to move,
 
-press SPACE, then type a . dot, then enter.  
+Press SPACE, then type a . dot, then enter.  
 This dot . means here, the file or folder will move to where you are in your terminal.
 
 ##
