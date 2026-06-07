@@ -25,3 +25,5 @@ Instead of rows and columns, NoSQL relies on **flexible data models**.
 
 ## MYSQL syntax: 
 Think of a SQL database like an Excel spreadsheet. `It holds tables with rows and columns.` To talk to the database, we use simple English-like commands to Create, Insert, and Select data.
+
+To start your file.sql, you need to call your HEAD line sql workflow first. By typing the type of sql sturcture you are intended to work with. 
