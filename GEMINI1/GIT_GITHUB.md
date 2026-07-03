@@ -102,3 +102,19 @@ This repository must be created in the local place. and in here all the modified
 This repository is out from our local cpu. And here you will find all the files confirmed and modified. It is possible to set a sync between the local cpu and the remote.
 
 HEAD: It is a pointer that aims to a specific change or photo we have done at some point in our main file.
+
+# HOW TO ADD NEW REPOSITORIES:
+1. Create a repository on GitHub
+2. Go to GitHub.com in your browser and log in.
+3. Click the green "New" button to create a new repository.
+4. Name it Dioramas1 (matching your local folder).
+Leave "Initialize this repository with" blank (don't check README, .gitignore, or license, since you already made those files locally).
+5. Click Create repository.
+
+`Link your Mac folder to GitHub`
+Type these 1 line at a time: 
+1. git remote add origin https://github.com/YOUR_USERNAME/Dioramas1.git
+2. git branch -M main
+3. git push -u origin main
+   
+   
